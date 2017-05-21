@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  </head>
+   <body>
+<div ng-controller="squareController">
+    <table class="square">
+        <tr ng-repeat="row in square.rows">
+	    <td ng-repeat="cell in row.cells" ng-click="uncovercell(cell)">
+                <img ng-if="cell.isCovered" src="images/covered.png" />
+                <img ng-if="!cell.isCovered && cell.content == 'empty'" src="images/empty.png" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script src="js/app.js" type="text/javascript"></script>
+
+    </body>
+</html>

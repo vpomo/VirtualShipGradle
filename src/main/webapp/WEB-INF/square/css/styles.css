@@ -1,0 +1,8 @@
+.square {
+    line-height:0;
+    border-spacing:0;
+}
+
+.square td {
+    padding:0
+}
